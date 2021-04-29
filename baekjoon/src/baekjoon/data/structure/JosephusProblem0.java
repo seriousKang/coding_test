@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.data.structure;
 
 import java.util.*;
 
