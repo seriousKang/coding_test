@@ -10,8 +10,8 @@ public class GasStation {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        long[] distances = new long[N-1];
-        long[] gasPrices = new long[N];
+        int[] distances = new int[N-1];
+        int[] gasPrices = new int[N];
 
         String[] distancesStrArr = br.readLine().split(" ");
         String[] gasPricesStrArr = br.readLine().split(" ");
@@ -20,7 +20,7 @@ public class GasStation {
             distances[i] = Integer.parseInt(distancesStrArr[i]);
         }
 
-        long minPrice = MAX_PRICE;
+        int minPrice = MAX_PRICE;
         for(int i=0; i<gasPricesStrArr.length; i++) {
             minPrice = Math.min(
                     Integer.parseInt(gasPricesStrArr[i]),
@@ -33,7 +33,7 @@ public class GasStation {
 
         long result = 0;
         for(int i=0; i<N-1; i++) {
-            result += (gasPrices[i] * distances[i]);
+            result += ((long)gasPrices[i] * (long)distances[i]);
         }
         System.out.println(result);
 
