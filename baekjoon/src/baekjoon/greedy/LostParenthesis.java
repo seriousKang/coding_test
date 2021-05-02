@@ -8,52 +8,25 @@ public class LostParenthesis {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String statement = br.readLine();
-        List<String> list = new ArrayList<>();
+        String[] arr = statement.split("-");
 
-        int cursor=0;
-        for(int i=0; i<statement.length(); i++) {
-            char c = statement.charAt(i);
-            if(c == '-' || c == '+') {
-                String num = statement.substring(cursor, i);
-                list.add(num);
-                list.add(Character.toString(c));
-                cursor = i+1;
-            }
-
-            if(i == statement.length()-1) {
-                list.add(statement.substring(cursor));
-            }
-        }
-
-        Stack<String> stack = new Stack<>();
-        for(int i=0; i<list.size(); i++) {
-            String str = list.get(i);
-            if(str.equals("+")) {
-                int before = Integer.parseInt(stack.pop());
-                int after = Integer.parseInt(list.get(++i));
-
-                stack.push(String.valueOf(before+after));
+        List<Integer> list = new ArrayList<>();
+        for(String str: arr) {
+            if(str.contains("+")) {
+                String[] subArr = str.split("\\+");
+                Integer sum = 0;
+                for(int i=0; i<subArr.length; i++) {
+                    sum += Integer.parseInt(subArr[i]);
+                }
+                list.add(sum);
             } else {
-                stack.push(str);
+                list.add(Integer.parseInt(str));
             }
         }
-//        System.out.println(stack);
 
-        List<String> reverseList = new ArrayList<>();
-        while(!stack.isEmpty()) {
-            reverseList.add(stack.pop());
-        }
-//        System.out.println(reverseList);
-
-        int result=0;
-        for(int i=reverseList.size()-1; i>=0; i--) {
-            String str = reverseList.get(i);
-
-            if(str.equals("-")) {
-                result -= Integer.parseInt(reverseList.get(--i));
-            } else {
-                result += Integer.parseInt(str);
-            }
+        int result = list.get(0);
+        for(int i=1; i<list.size(); i++) {
+            result -= list.get(i);
         }
         System.out.println(result);
 
