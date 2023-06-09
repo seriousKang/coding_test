@@ -1,4 +1,4 @@
-package programmers.lv2.hash;
+package programmers.lv1.hash;
 
 import java.util.*;
 import java.util.stream.*;
