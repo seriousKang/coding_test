@@ -17,3 +17,7 @@
 #### stream
 - IntStream *<span style="color:grey">-> `java.util.stream` 패키지</span>*
   - 생성: `IntStream.range(int startInclusive, int endExclusive)` 
+
+#### 진법 변환
+- n진수 -> 10진수: `Integer.parseInt(String s, int radix)`
+  > ex. Integer.parseInt("21", 3) -> 7
