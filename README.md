@@ -1,4 +1,11 @@
 ## coding test
+### 용어
+#### 나눗셈
+- quotient: 몫
+- remainder: 나머지
+
+---
+
 ### 유용한 기능
 #### array
 - 배열 복사: `System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)`
