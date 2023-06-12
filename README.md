@@ -3,6 +3,8 @@
 #### 나눗셈
 - quotient: 몫
 - remainder: 나머지
+- dividend: 피제수
+- divisor: 제수
 
 ---
 
