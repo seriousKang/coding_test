@@ -21,6 +21,14 @@
 #### stream
 - IntStream *<span style="color:grey">-> `java.util.stream` 패키지</span>*
   - 생성: `IntStream.range(int startInclusive, int endExclusive)` 
+- integer sum
+  - 예시
+```java
+Arrays.stream(photo[i])
+      .filter(member -> score.containsKey(member))
+      .mapToInt(member -> score.get(member))
+      .sum();
+```
 
 #### 진법 변환
 - n진수 -> 10진수: `Integer.parseInt(String s, int radix)`
