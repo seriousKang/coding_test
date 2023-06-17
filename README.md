@@ -15,6 +15,8 @@
 
 #### collections
 - swap: `Collections.swap(List<?> list, int i, int j)` *<span style="color:grey">-> `java.util` 패키지</span>*
+- `map`
+  - `containsKey`, `containsValue`
 
 #### stream
 - IntStream *<span style="color:grey">-> `java.util.stream` 패키지</span>*
