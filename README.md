@@ -1,4 +1,4 @@
-## coding test
+## coding practice
 ### 용어
 #### 나눗셈
 - quotient: 몫
